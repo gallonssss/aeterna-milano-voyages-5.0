@@ -220,6 +220,32 @@
       <img src="monaco.jpg" alt="Monaco" />
       <p>Lusso, casinò e vista sul mare in una delle mete più raffinate d’Europa.</p>
     </div>
+    <!-- New Destinations -->
+    <div class="destinazione">
+      <h3>Firenze</h3>
+      <img src="firenze.jpg" alt="Firenze" />
+      <p>Alla scoperta delle meraviglie artistiche e storiche di una città senza pari.</p>
+    </div>
+    <div class="destinazione">
+      <h3>Roma</h3>
+      <img src="roma.jpg" alt="Roma" />
+      <p>Vivi la città eterna, tra rovine storiche e bellezze senza tempo.</p>
+    </div>
+    <div class="destinazione">
+      <h3>Palermo</h3>
+      <img src="palermo.jpg" alt="Palermo" />
+      <p>Un tuffo nella storia e nelle tradizioni siciliane, tra mercati e monumenti.</p>
+    </div>
+    <div class="destinazione">
+      <h3>Venezia</h3>
+      <img src="venezia.jpg" alt="Venezia" />
+      <p>Un viaggio romantico attraverso i canali di una delle città più affascinanti del mondo.</p>
+    </div>
+    <div class="destinazione">
+      <h3>Dubai</h3>
+      <img src="dubai.jpg" alt="Dubai" />
+      <p>Scopri la città del futuro, tra grattacieli spettacolari e lusso sfrenato.</p>
+    </div>
   </section>
 
   <section id="recensioni">
@@ -276,38 +302,37 @@
   </section>
 
   <section id="contatti">
-    <h2>Contatti</h2>
-    <p>📍 Indirizzo: Piazza del Duomo, 19, Milano</p>
-    <p>📞 Telefono: +39 348 115 7608</p>
-    <p>📧 Email: <a href="mailto:aeternamilanov@gmail.com">aeternamilanov@gmail.com</a></p>
-  </section>
+  <h2>Contatti</h2>
+  <p>📍 Indirizzo: Piazza del Duomo, 19, Milano</p>
+  <p>📧 Email: <a href="mailto:info@aeternamilano.com">info@aeternamilano.com</a></p>
+  <p>📞 Telefono: <a href="tel:+393481157608">+39 348 115 7608</a></p>
+</section>
 
   <footer>
-    <p>&copy; 2025 Aeterna Milano Voyages – Tutti i diritti riservati</p>
+    <p>&copy; 2025 Aeterna Milano Voyages | Tutti i diritti riservati</p>
   </footer>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      if (menu.style.display === "none" || menu.style.display === "") {
-        menu.style.display = "block";
-      } else {
-        menu.style.display = "none";
-      }
+    // Funzione per mostrare la sezione selezionata
+    function showSection(sectionId) {
+      // Nascondi tutte le sezioni
+      var sections = document.querySelectorAll('section');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+
+      // Mostra la sezione selezionata
+      document.getElementById(sectionId).style.display = 'block';
     }
 
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll('section');
-      sections.forEach((section) => {
-        if (section.id === sectionId) {
-          section.style.display = 'block';
-        } else {
-          section.style.display = 'none';
-        }
-      });
-      // Close the menu after selecting a section
-      const menu = document.getElementById('menu');
-      menu.style.display = 'none';
+    // Funzione per aprire/chiudere il menu a tendina
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
     }
   </script>
 
